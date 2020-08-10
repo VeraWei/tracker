@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/navbar.component";
 import TodosList from "./components/todos-list.component";
 import CreateTodo from "./components/create-todo.component";
+import EditTodo from "./components/edit-todo.component";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <br />
         <Route path="/" exact component={TodosList} />
         <Route path="/create" component={CreateTodo} />
+        <Route path="/update/:id" component={EditTodo} />
       </div>
     </Router>
   );

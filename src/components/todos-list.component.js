@@ -6,6 +6,7 @@ const Todo = props => (
   <tr className="d-flex">
     <td  className='col-10'>{props.todo.activity}</td>
     <td className='col-2' style={{textAlign:"right"}}>
+      <button onClick={() => { window.location = `/update/${props.todo._id}` }} >edit</button>
       <button onClick={() => { props.deleteTodo(props.todo._id) }} >delete</button>
     </td>
   </tr>
